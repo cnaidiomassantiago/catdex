@@ -19,7 +19,7 @@ const CATS_DATA = [
     name: 'Neko Coder',
     emoji: '🐱💻',
     emojiLight: '😸💻',   // ativo de dia
-    emojiDark:  '😴💻',   // dorme à noite (diurno)
+    emojiDark: '😴💻',   // dorme à noite (diurno)
     nightCat: false,
     type: 'Tecnologia',
     rarity: 'Raro',
@@ -42,7 +42,7 @@ const CATS_DATA = [
     name: 'Ninja Felino',
     emoji: '🐈‍⬛🥷',
     emojiLight: '😾🥷',   // triste de dia — criatura das sombras
-    emojiDark:  '🐈‍⬛🥷',  // em seu elemento à noite
+    emojiDark: '🐈‍⬛🥷',  // em seu elemento à noite
     nightCat: true,
     type: 'Combate',
     rarity: 'Épico',
@@ -65,7 +65,7 @@ const CATS_DATA = [
     name: 'Gato das Trevas',
     emoji: '🦇🐱',
     emojiLight: '😿🌞',   // sofre no claro
-    emojiDark:  '🦇🐱',   // poder total no escuro
+    emojiDark: '🦇🐱',   // poder total no escuro
     nightCat: true,
     type: 'Sombrio',
     rarity: 'Épico',
@@ -88,7 +88,7 @@ const CATS_DATA = [
     name: 'Samurai Miado',
     emoji: '⚔️🐯',
     emojiLight: '⚔️😤',   // concentrado de dia
-    emojiDark:  '⚔️😴',   // medita/dorme à noite
+    emojiDark: '⚔️😴',   // medita/dorme à noite
     nightCat: false,
     type: 'Guerreiro',
     rarity: 'Lendário',
@@ -111,7 +111,7 @@ const CATS_DATA = [
     name: 'Hacker Purrfect',
     emoji: '💀🐱',
     emojiLight: '😑🐱',   // indiferente de dia
-    emojiDark:  '💀🐱',   // hacker ativo à noite
+    emojiDark: '💀🐱',   // hacker ativo à noite
     nightCat: true,
     type: 'Tecnologia',
     rarity: 'Épico',
@@ -134,7 +134,7 @@ const CATS_DATA = [
     name: 'Mago Nyarlan',
     emoji: '🧙‍♂️🐱',
     emojiLight: '🧙‍♂️😺',  // conjura magia solar de dia
-    emojiDark:  '🧙‍♂️🌙',  // invoca poderes lunares à noite
+    emojiDark: '🧙‍♂️🌙',  // invoca poderes lunares à noite
     nightCat: false,
     type: 'Magia',
     rarity: 'Lendário',
@@ -157,7 +157,7 @@ const CATS_DATA = [
     name: 'DJ Scratch',
     emoji: '🎧🐱',
     emojiLight: '🎧😸',   // groovy de dia
-    emojiDark:  '🎧🐱',   // lota os clubs à noite
+    emojiDark: '🎧🐱',   // lota os clubs à noite
     nightCat: true,
     type: 'Arte',
     rarity: 'Raro',
@@ -180,7 +180,7 @@ const CATS_DATA = [
     name: 'Astronauta Nyan',
     emoji: '🚀🐱',
     emojiLight: '🚀😸',   // decolando de dia
-    emojiDark:  '🌌🐱',   // explorando o cosmos à noite
+    emojiDark: '🌌🐱',   // explorando o cosmos à noite
     nightCat: false,
     type: 'Cósmico',
     rarity: 'Lendário',
@@ -203,7 +203,7 @@ const CATS_DATA = [
     name: 'Capitão Miaurgan',
     emoji: '🏴‍☠️🐱',
     emojiLight: '🏴‍☠️😸',  // navegando de dia
-    emojiDark:  '🏴‍☠️🌙',  // saqueando à noite
+    emojiDark: '🏴‍☠️🌙',  // saqueando à noite
     nightCat: true,
     type: 'Aventura',
     rarity: 'Épico',
@@ -226,7 +226,7 @@ const CATS_DATA = [
     name: 'Sir Purrington',
     emoji: '⚔️🛡️🐱',
     emojiLight: '🛡️😤',   // guardando o reino de dia
-    emojiDark:  '🛡️😴',   // descansando o cavaleiro à noite
+    emojiDark: '🛡️😴',   // descansando o cavaleiro à noite
     nightCat: false,
     type: 'Guerreiro',
     rarity: 'Raro',
@@ -249,7 +249,7 @@ const CATS_DATA = [
     name: 'Cyber Neko',
     emoji: '🤖🐱',
     emojiLight: '🤖😤',   // processando dados de dia
-    emojiDark:  '🤖🔋',   // recarregando à noite
+    emojiDark: '🤖🔋',   // recarregando à noite
     nightCat: false,
     type: 'Tecnologia',
     rarity: 'Lendário',
@@ -272,7 +272,7 @@ const CATS_DATA = [
     name: 'Espectro Gatuno',
     emoji: '👻🐱',
     emojiLight: '😿👻',   // fantasma triste com tanta luz
-    emojiDark:  '👻🌙',   // assombra de madrugada
+    emojiDark: '👻🌙',   // assombra de madrugada
     nightCat: true,
     type: 'Sombrio',
     rarity: 'Comum',
@@ -296,15 +296,15 @@ const CATS_DATA = [
 // ESTADO GLOBAL
 // ══════════════════════════════════════════════════════════════
 const state = {
-  unlockedIds:   new Set(),
-  newIds:        new Set(),
-  favoriteIds:   new Set(),
-  filters:       { rarity: 'all', type: 'all', status: 'all', sort: 'id' },
-  searchQuery:   '',
-  theme:         'dark',
-  currentPage:   'home',
-  currentTab:    'catalog',
-  rankingStat:   'atk',
+  unlockedIds: new Set(),
+  newIds: new Set(),
+  favoriteIds: new Set(),
+  filters: { rarity: 'all', type: 'all', status: 'all', sort: 'id' },
+  searchQuery: '',
+  theme: 'dark',
+  currentPage: 'home',
+  currentTab: 'catalog',
+  rankingStat: 'atk',
 };
 
 // ══════════════════════════════════════════════════════════════
@@ -361,17 +361,17 @@ window.scrollToSection = scrollToSection;
 function loadState() {
   try {
     const saved = JSON.parse(localStorage.getItem('catdex_v2') || '{}');
-    if (saved.unlockedIds)  state.unlockedIds  = new Set(saved.unlockedIds);
-    if (saved.favoriteIds)  state.favoriteIds  = new Set(saved.favoriteIds);
-    if (saved.theme)        state.theme        = saved.theme;
+    if (saved.unlockedIds) state.unlockedIds = new Set(saved.unlockedIds);
+    if (saved.favoriteIds) state.favoriteIds = new Set(saved.favoriteIds);
+    if (saved.theme) state.theme = saved.theme;
   } catch (e) { /* silencioso */ }
 }
 
 function saveState() {
   localStorage.setItem('catdex_v2', JSON.stringify({
-    unlockedIds:  [...state.unlockedIds],
-    favoriteIds:  [...state.favoriteIds],
-    theme:        state.theme
+    unlockedIds: [...state.unlockedIds],
+    favoriteIds: [...state.favoriteIds],
+    theme: state.theme
   }));
 }
 
@@ -409,7 +409,7 @@ function toggleTheme() {
 function getCatEmoji(cat) {
   if (!state.unlockedIds.has(cat.id)) return cat.emoji; // bloqueado = padrão
   if (state.theme === 'light') return cat.emojiLight || cat.emoji;
-  return cat.emojiDark  || cat.emoji;
+  return cat.emojiDark || cat.emoji;
 }
 
 /** Texto de humor exibido no card e no modal */
@@ -501,7 +501,7 @@ function setupScrollReveal() {
 // MOBILE MENU (home)
 // ══════════════════════════════════════════════════════════════
 function setupMobileMenu() {
-  const btn  = document.getElementById('mobile-menu-btn');
+  const btn = document.getElementById('mobile-menu-btn');
   const menu = document.querySelector('.home-nav-links');
   if (!btn || !menu) return;
   btn.addEventListener('click', () => {
@@ -555,13 +555,13 @@ function getFilteredCats() {
     const unlocked = state.unlockedIds.has(cat.id);
     const { rarity, type, status } = state.filters;
     const q = state.searchQuery.toLowerCase();
-    if (rarity  !== 'all' && cat.rarity !== rarity) return false;
-    if (type    !== 'all' && cat.type   !== type)   return false;
+    if (rarity !== 'all' && cat.rarity !== rarity) return false;
+    if (type !== 'all' && cat.type !== type) return false;
     if (status === 'unlocked' && !unlocked) return false;
-    if (status === 'locked'   &&  unlocked) return false;
+    if (status === 'locked' && unlocked) return false;
     if (q && !cat.name.toLowerCase().includes(q) &&
-             !cat.type.toLowerCase().includes(q) &&
-             !cat.rarity.toLowerCase().includes(q)) return false;
+      !cat.type.toLowerCase().includes(q) &&
+      !cat.rarity.toLowerCase().includes(q)) return false;
     return true;
   });
 
@@ -577,9 +577,9 @@ function getFilteredCats() {
 
 function createCard(cat, index) {
   const unlocked = state.unlockedIds.has(cat.id);
-  const isNew    = state.newIds.has(cat.id);
-  const isFav    = state.favoriteIds.has(cat.id);
-  const mood     = unlocked ? getMoodText(cat) : null;
+  const isNew = state.newIds.has(cat.id);
+  const isFav = state.favoriteIds.has(cat.id);
+  const mood = unlocked ? getMoodText(cat) : null;
   const displayEmoji = getCatEmoji(cat);
 
   const card = document.createElement('div');
@@ -627,12 +627,12 @@ function createCard(cat, index) {
 // MODAL
 // ══════════════════════════════════════════════════════════════
 function openModal(catId) {
-  const cat      = CATS_DATA.find(c => c.id === catId);
+  const cat = CATS_DATA.find(c => c.id === catId);
   if (!cat) return;
   const unlocked = state.unlockedIds.has(cat.id);
-  const isFav    = state.favoriteIds.has(cat.id);
-  const xpPct    = (cat.xp / cat.xpMax) * 100;
-  const mood     = getMoodText(cat);
+  const isFav = state.favoriteIds.has(cat.id);
+  const xpPct = (cat.xp / cat.xpMax) * 100;
+  const mood = getMoodText(cat);
   const displayEmoji = getCatEmoji(cat);
 
   const content = document.getElementById('modal-content');
@@ -816,10 +816,10 @@ function unlockRandom() {
 function showUnlockEffect(cat) {
   const fx = document.getElementById('unlock-fx');
   document.getElementById('unlock-cat-icon').textContent = getCatEmoji(cat);
-  document.getElementById('unlock-name').textContent     = cat.name;
+  document.getElementById('unlock-name').textContent = cat.name;
 
   const colors = { Comum: '#94a3b8', Raro: '#38bdf8', Épico: '#a855f7', Lendário: '#fbbf24' };
-  const color  = colors[cat.rarity] || '#a855f7';
+  const color = colors[cat.rarity] || '#a855f7';
 
   const rEl = document.getElementById('unlock-rarity');
   rEl.textContent = cat.rarity;
@@ -834,10 +834,10 @@ function showUnlockEffect(cat) {
 
 function spawnParticles(color, count = 20) {
   for (let i = 0; i < count; i++) {
-    const p   = document.createElement('div');
+    const p = document.createElement('div');
     p.className = 'unlock-particle';
     const angle = (i / count) * 360;
-    const dist  = 90 + Math.random() * 180;
+    const dist = 90 + Math.random() * 180;
     p.style.cssText = `
       left:50%;top:50%;
       background:${color};
@@ -857,10 +857,10 @@ function spawnParticles(color, count = 20) {
 function updateProgress() {
   const count = state.unlockedIds.size;
   const total = CATS_DATA.length;
-  const pct   = Math.round((count / total) * 100);
-  const el_c  = document.getElementById('collection-count');
-  const el_b  = document.getElementById('global-progress-bar');
-  const el_p  = document.getElementById('global-progress-pct');
+  const pct = Math.round((count / total) * 100);
+  const el_c = document.getElementById('collection-count');
+  const el_b = document.getElementById('global-progress-bar');
+  const el_p = document.getElementById('global-progress-pct');
   if (el_c) el_c.textContent = count;
   if (el_b) el_b.style.width = `${pct}%`;
   if (el_p) el_p.textContent = `${pct}%`;
@@ -874,11 +874,11 @@ function renderCollectionDashboard() {
   if (!panel) return;
 
   const unlocked = CATS_DATA.filter(c => state.unlockedIds.has(c.id));
-  const total    = CATS_DATA.length;
-  const pct      = Math.round((unlocked.length / total) * 100);
+  const total = CATS_DATA.length;
+  const pct = Math.round((unlocked.length / total) * 100);
 
   const rarityCounts = { Comum: 0, Raro: 0, Épico: 0, Lendário: 0 };
-  const rarityTotal  = { Comum: 0, Raro: 0, Épico: 0, Lendário: 0 };
+  const rarityTotal = { Comum: 0, Raro: 0, Épico: 0, Lendário: 0 };
   CATS_DATA.forEach(c => rarityTotal[c.rarity]++);
   unlocked.forEach(c => rarityCounts[c.rarity]++);
 
@@ -939,7 +939,7 @@ function renderRanking() {
   const panel = document.getElementById('ranking-panel');
   if (!panel) return;
 
-  const stat  = state.rankingStat;
+  const stat = state.rankingStat;
   const label = { atk: 'Ataque ⚔️', def: 'Defesa 🛡️', spd: 'Velocidade 💨', mana: 'Mana ✨', level: 'Nível 📊' };
   const sorted = [...CATS_DATA].sort((a, b) => {
     if (stat === 'level') return b.level - a.level;
@@ -954,11 +954,11 @@ function renderRanking() {
     </div>
     <div class="ranking-list">
       ${sorted.map((cat, i) => {
-        const unlocked = state.unlockedIds.has(cat.id);
-        const val      = stat === 'level' ? cat.level : cat.stats[stat];
-        const posClass = i === 0 ? 'pos-1' : i === 1 ? 'pos-2' : i === 2 ? 'pos-3' : '';
-        const medal    = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `#${i + 1}`;
-        return `
+    const unlocked = state.unlockedIds.has(cat.id);
+    const val = stat === 'level' ? cat.level : cat.stats[stat];
+    const posClass = i === 0 ? 'pos-1' : i === 1 ? 'pos-2' : i === 2 ? 'pos-3' : '';
+    const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `#${i + 1}`;
+    return `
           <div class="ranking-item ${unlocked ? '' : 'ranking-locked'}" onclick="${unlocked ? `openModal(${cat.id})` : ''}">
             <div class="ranking-pos ${posClass}">${medal}</div>
             <div class="ranking-emoji">${unlocked ? getCatEmoji(cat) : '🔒'}</div>
@@ -969,7 +969,7 @@ function renderRanking() {
             <div class="ranking-val">${unlocked ? val : '—'}</div>
           </div>
         `;
-      }).join('')}
+  }).join('')}
     </div>
   `;
 
@@ -1093,7 +1093,7 @@ function setupEventListeners() {
       const btn = e.target.closest('.pill');
       if (!btn) return;
       const filterType = btn.dataset.filter;
-      const value      = btn.dataset.value;
+      const value = btn.dataset.value;
       if (!filterType || !value) return;
       group.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
@@ -1118,7 +1118,7 @@ function setupEventListeners() {
       tab.classList.add('active');
       document.getElementById(`tab-${target}`)?.classList.add('active');
       if (target === 'collection') renderCollectionDashboard();
-      if (target === 'ranking')    renderRanking();
+      if (target === 'ranking') renderRanking();
     });
   });
 

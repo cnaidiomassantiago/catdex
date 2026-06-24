@@ -1,411 +1,431 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme ="dark">
+<html lang="pt-BR" data-theme="dark" data-page="home">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catdex - Enciclopédia Felina</title>
+    <title>CatDex — Enciclopédia Felina</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Exo+:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
 </head>
+
 <body>
 
-    <!-- CANVAS DE PARTÍCULAS-->
-     <canvas id="particles-canvas"></canvas>
+    <!-- CANVAS DE PARTÍCULAS (fundo global) -->
+    <canvas id="particles-canvas"></canvas>
 
-     <!-- LOADER -->
-      <div id="loader">
+    <!-- LOADER -->
+    <div id="loader">
         <div class="loader-inner">
             <div class="loader-paw">🐾</div>
-            <div class="loader-cat">🐱</div>
-            <div class="loader-text">Catdex</div>
-            <div class="loader-bar"><div class="loader-fill"></div></div>
-            <div class="loader-sub">Carregado enciclopédia felina :3</div>
+            <div class="loader-cat" id="loader-emoji">🐱</div>
+            <div class="loader-text">CatDex</div>
+            <div class="loader-bar">
+                <div class="loader-fill"></div>
+            </div>
+            <div class="loader-sub">Inicializando Enciclopédia Felina...</div>
         </div>
-      </div>
+    </div>
 
-        <!--
-            PAGINA HOME
-        -->
-        <div id="page-home" class="page active">
+    <!-- ══════════════════════════════════════════════
+       PÁGINA HOME (Landing)
+  ══════════════════════════════════════════════ -->
+    <div id="page-home" class="page active">
 
-            <!-- NAV HOME -->
-            <nav class="home-nav">
-                <div class="home-nav-inner">
-                    <div class="logo">
-                        <span class="logo-icon">🐱</span>
-                        <span class="logo-text">Cat<span class="logo-accent">Dex</span></span>
-                    </div>
-                    <div class="home-nav-links">
-                        <a href="#features-section" class="logo-accent">Features</a>
-                        <a href="#cats-preview" class="nav-link">Gatos</a>
-                        <a href="#stats-section" class="nav-link">Stats</a>
-                        <button id="theme-toggle-home" class="icon-btn" title="Alterar tema">🌙</button>
-                        <button class="btn-cna-nav" onclick="navigateTo('dex')">Abrir CatDex </button>
-                    </div>
-                    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        <!-- NAV HOME -->
+        <nav class="home-nav">
+            <div class="home-nav-inner">
+                <div class="logo">
+                    <span class="logo-icon">🐱</span>
+                    <span class="logo-text">Cat<span class="logo-accent">Dex</span></span>
                 </div>
-            </nav>
+                <div class="home-nav-links">
+                    <a href="#features-section" class="nav-link">Features</a>
+                    <a href="#cats-preview" class="nav-link">Gatos</a>
+                    <a href="#stats-section" class="nav-link">Stats</a>
+                    <button id="theme-toggle-home" class="icon-btn" title="Alternar tema">🌙</button>
+                    <button class="btn-cta-nav" onclick="navigateTo('dex')">Abrir CatDex </button>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            </div>
+        </nav>
 
-            <!-- HERO -->
-             <section class="hero-section">
-                <div class="hero-bg-grid"></div>
-                <div class="hero-glow hero-glow-1"></div>
-                <div class="hero-glow hero-glow-2"></div>
-                <div class="hero-glow hero-glow-3"></div>
+        <!-- HERO -->
+        <section class="hero-section">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-glow hero-glow-3"></div>
 
-                <div class="hero-content">
-                    <div class="hero-eyebrow">
-                        <span class="eyebrow-dot"></span>
-                        A Enciclopédia Felina Definitiva
-                        <span class="eyebrow-dot"></span>
-                    </div>
-
-                    <h1 class="hero-title">
-                        <span class="hero-title-line">Colecione.</span>
-                        <span class="hero-title-line accent-gradient">Explore.</span>
-                        <span class="hero-title-line">Domine.</span>
-                    </h1>
-
-                    <p class="hero-desc">
-                        12 gatos únicos com abilidades épicas, raridades secretas e personalidades absurdas.
-                        Desbloqueie todos. Impressione ninguém. Os gatos não ligam lol.
-                    </p>
-
-                    <div class="hero-actions">
-                        <button class="btn-hero-primary" onclick="navigateTo('dex')">
-                            <span>⚡</span> Explorar CatDex
-                        </button>
-                        <button class="btn-hero-secondary" onclick="scrollToSection('features-section')">
-                            Ver Features ⬇
-                        </button>
-                    </div>
-
-                    <div class="hero-badge">
-                        <div class="hero-badge"><span>📖</span> 12 gatos</div>
-                        <div class="hero-badge"><span>⭐</span>4 raridades</div>
-                        <div class="hero-badge"><span>💾</span> Progresso Salvo</div>
-                        <div class="hero-badge"><span>🎵</span> Sons & FX</div>
-                    </div>
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    A Enciclopédia Felina Definitiva
+                    <span class="eyebrow-dot"></span>
                 </div>
 
-                <!-- Vitrine flutuante de emoji -->
-                 <div class="hero-showcase">
-                    <div class="showcase-ring">
-                        <div class="showcase-card sc1">💻🐱<div class="sc-label">Neko Coder</div></div>
-                        <div class="showcase-card sc2">⚔️🐯<div class="sc-label">Samurai</div></div>
-                        <div class="showcase-card sc3">🧙🐱<div class="sc-label">Mago</div></div>
-                        <div class="showcase-card sc4">🚀🐱<div class="sc-label">Astronauta</div></div>
-                        <div class="showcase-card sc5">🤖🐱<div class="sc-label">Cyborg</div></div>
-                        <div class="showcase-card sc6">🏴‍☠️🐱<div class="sc-label">Pirata</div></div>
-                    </div>
-                 </div>
-                 <div class="hero-scroll-hint">
-                    <div class="scroll-arrow"></div>
-                 </div>
-             </section>
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Colecione.</span>
+                    <span class="hero-title-line accent-gradient">Explore.</span>
+                    <span class="hero-title-line">Domine.</span>
+                </h1>
 
-             <!-- FEATURES -->
-            <sectiom class="features-section" id="features-section">
-                <div class="section-inner">
-                    <div class="section-header">
-                        <div class="section-eyebrow">Por que CatDex?</div>
-                        <h2 class="section-title">Features <span class="accent-gradient">Épicas</span></h2>
-                        <p class="section-sub">Tudo o que uma enciclopédia felina precisa. E mais.</p>
-                    </div>
+                <p class="hero-desc">
+                    12 gatos únicos com habilidades épicas, raridades secretas e personalidades absurdas.
+                    Desbloqueie todos. Impressione ninguém. Os gatos não ligam.
+                </p>
 
-                    <div class="features-grid">
-                        <div class="section-inner">
-                            <div class="feature-card fc-highlights">
-                                <div class="feature-icon">🃏</div>
-                                <h3>Cards interativos</h3>
-                                <p>Cada gato é um card animado com stats, XP, raridade e habilidades únicas. Hover revela detalhes ocultos.</p>
-                            </div>
-                            <div class="feature-card fc-collection">
-                                <div class="feature-icon">🌗</div>
-                                <h3>Tema Reativo</h3>
-                                <p>Gatos noturnos ficam tristes no modo claro. Gatos diurnos dormem no escuro.</p>
-                            </div>
-                            <div class="feature-card fc-collection">
-                                <div class="feature-icon">⚡</div>
-                                <h3>Desbloqueio Épico</h3>
-                                <p>Efeito de partículas, jingle de celebração e animação de desbloqueio para cada novo gato conquistado</p>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-icon">💾</div>
-                                <h3>Progresso Salvo</h3>
-                                <p>Sua coleção persiste via localStorage. Feche o navegador, volte quando quiser - os gatos te aguardam</p>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-icon">🔎</div>
-                                <h3>Busca & filtros</h3>
-                                <p>Filtre por raridade, tipo e status. Busca em tempo real por nome. Encontra qualquer gato em segundos.</p>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-icon">🎵</div>
-                                <h3>Sons e Microinterações</h3>
-                                <p>Web Audio API gera sons procedurais para abertura de modal, desbloqueio e interação. imersão total.</p>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-icon">🏆</div>
-                                <h3>Sistemas de Ranking</h3>
-                                <p>Compare gatos por ATK, DEF, SPD e MANA. Descubra qual é o mais poderoso da sua coleção.</p>
-                            </div>
-                            <div class="feature-card">
-                                <div class="feature-icon">📊</div>
-                                <h3>Estatísticas da Coleção</h3>
-                                <p>Veja seu progresso, raridades coletadas e gatos favoritos em um painel completo.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <div class="hero-actions">
+                    <button class="btn-hero-primary" onclick="navigateTo('dex')">
+                        <span>⚡</span> Explorar CatDex
+                    </button>
+                    <button class="btn-hero-secondary" onclick="scrollToSection('features-section')">
+                        Ver Features ↓
+                    </button>
+                </div>
 
-                <!-- PREVIEW DE GATOS -->
-                 <section class="cats-preview-section" id="cats-preview">
-                    <div class="section-inner">
-                        <div class="section-header">
-                            <div class="section-eyebrow">Conheça os Felinos</div>
-                            <h2 class="section-title">Gatos <span class="accent-gradient">Disponíveis</span></h2>
-                            <p class="section-sub">Uma prévia dos 12 gatos únicos que você pode colecionar.</p>
-                        </div>
-                        <div class="preview-grid" id="home-preview-grid"></div>
-                        <div class="preview-cta">
-                            <button class="btn-hero-primary" onclick="navigateTo('dex')">
-                                Ver todos no CatDex
-                            </button>
-                        </div>
-                    </div>
-                 </section>
-
-                 <!-- STATS ANIMADOS -->
-                 <section class="stats-section" id="stats-section">
-                    <div class="section-inner">
-                        <div class="stats-grid">
-                            <div class="stats-counter">
-                                <div class="stat-num" data-target="12">0</div>
-                                <div class="stat-label">Gatos Únicos</div>
-                            </div>
-                            <div class="stats-counter">
-                                <div class="stat-num" data-target="4">0</div>
-                                <div class="stat-label">Raridades</div>
-                            </div>
-                            <div class="stats-counter">
-                                <div class="stat-num" data-target="24">0</div>
-                                <div class="stat-label">Habilidades</div>
-                            </div>
-                            <div class="stats-counter">
-                                <div class="stat-num" data-target="9">0</div>
-                                <div class="stat-label">Tipos de Classe</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- RARIDADES -->
-                 <section class="rarity-section">
-                    <div class="section-inner">
-                        <div class="section-header">
-                            <div class="section-eyebrow">Sistema de Raridades</div>
-                            <h2 class="section-title">Quão <span class="accent-gradient">Raro</span> você é?</h2>
-                        </div>
-                        <div class="rarity-grid">
-                            <div class="rarity-showcase rarity-showcase-comum">
-                                <div class="rarity-icon">⬜</div>
-                                <div class="rarity-name">Comum</div>
-                                <div class="rarity-desc">Fácil de encontrar, dificíl de ignorar. Todo gato tem sua história.</div>
-                                <div class="rarity-count">2 gatos</div>
-                            </div>
-                            <div class="rarity-showcase rarity-showcase-raro">
-                                <div class="rarity-icon">🔹</div>
-                                <div class="rarity-name">Raro</div>
-                                <div class="rarity-desc">Acima da média. Habilidades especiais e personalidade marcante.</div>
-                                <div class="rarity-count">4 gatos</div>
-                            </div>
-                            <div class="rarity-showcase rarity-showcase-epico">
-                                <div class="rarity-icon">💜</div>
-                                <div class="rarity-name">Épico</div>
-                                <div class="rarity-desc">Poderes imensuráveis e ego ainda maior. Difícil de desbloquear.</div>
-                                <div class="rarity-count">4 gatos</div>
-                            </div>
-                            <div class="rarity-showcase rarity-showcase-lendario">
-                                <div class="rarity-icon">👑</div>
-                                <div class="rarity-name">Lendário</div>
-                                <div class="rarity-desc">Existências míticas. Miados que ecoam pela eternidade.</div>
-                                <div class="rarity-count">2 gatos</div>
-                            </div>
-                        </div>
-                    </div>
-                 </section>
-
-
-                 <!-- CTA FINAL -->
-                 <section class="cta-section">
-                    <div class="cta-inner">
-                        <div class="cta-glow"></div>
-                        <div class="cta-emoji">🐱</div>
-                        <h2 class="cta-title">Pronto para começar?</h2>
-                        <p class="cta-desc">Sua coleção felina te aguarda. Os gatos já estão julgando você.</p>
-                        <button class="btn-hero-primary btn-cta-big" onclick="navigateTo('dex')">
-                            ⚡Abrir CatDex Agora
-                        </button>
-                    </div>
-                 </section>
-
-                 <!-- FOOTER -->
-                 <footer class="home-footer">
-                    <div class="footer-inner">
-                        <div class="logo">
-                            <span class="logo-icon">🐱</span>
-                            <span class="logo-text">Cat<span class="logo-accent">Dex</span></span>
-                        </div>
-                        <p class="footer-text">Feito com 🐾 e muito café, Nenhum gato foi prejudicado.</p>
-                        <p class="footer-copy">© 2025 CatDex · HTML + CSS + JS puro</p>
-                    </div>
-                 </footer>
+                <div class="hero-badges">
+                    <div class="hero-badge"><span>📖</span> 12 Gatos</div>
+                    <div class="hero-badge"><span>⭐</span> 4 Raridades</div>
+                    <div class="hero-badge"><span>💾</span> Progresso Salvo</div>
+                    <div class="hero-badge"><span>🎵</span> Sons & FX</div>
+                </div>
             </div>
 
-            <!--
-                    PAGINA DEX(App principal)
-            -->
-            <div id="page-dex" class="page">
-
-                <!-- HEADER DEX -->
-                <header id="main-header">
-                    <div class="header-inner">
-                        <div class="logo header-logo" onclick="navigateTo('home')" style="cursor:pointer" title="Voltar à Home">
-                            <span class="logo-icon">🐱</span>
-                            <span class="logo-text">Cat<span class="logo-accent">Dex</span></span>
-                        </div>
-
-                        <div class="search-wrap">
-                            <span class="search-icon">🔍</span>
-                            <input type="text" id="search-input" placeholder="Buscar gatos..." autocomplete="off" />
-                            <button id="search-clear" title="limpar">✕</button>
-                        </div>
-
-                        <div class="header-right">
-                            <div class="collection-badge" id="collection-badge">
-                                <span>📖</span>
-                                <span id="collection-count">0</span>/<span id="collection-total">12</span>
-                                <span class="badge-label">coletados</span>
-                            </div>
-                            <button id="ranking-btn" class="icon-btn-header" title="Ranking">🏆</button>
-                            <button id="theme-toggle" class="icon-btn-header" title="Alterar tema">🌙</button>
-                            <button id="unlock-random-btn" class="btn-unlock">⚡ desbloquear</button>
-                        </div>
+            <!-- Vitrine flutuante de emojis -->
+            <div class="hero-showcase">
+                <div class="showcase-ring">
+                    <div class="showcase-card sc1">🐱💻<div class="sc-label">Neko Coder</div>
                     </div>
-                </header>
-
-                <!-- TABS -->
-                <div class="dex-tabs">
-                    <button class="dex-tab active" data-lab="catalog">📋 Catálogo</button>
-                    <button class="dex-tab" data-tab="collection">⭐ Minha coleção</button>
-                    <button class="dex-tab" data-tab="ranking">🏆 Ranking</button>
-                </div>
-
-                <!-- FILTROS -->
-                <section id="filters-section">
-                    <div class="filter-inner">
-                        <div class="filter-group">
-                            <span class="filter-labels">Raridade:</span>
-                            <div class="filter-pills" id="rarity-filter">
-                                <button class="pill active" data-filters="rarity" data-value="all">Todas</button>
-                                <button class="pill rarity-comum" data-filters="rarity" data-value="Comum">Comum</button>
-                                <button class="pill rarity-raro" data-filters="rarity" data-value="Raro">Raro</button>
-                                <button class="pill rarity-epico" data-filters="rarity" data-value="Épico">Épico</button>
-                                <button class="pill rarity-lendario" data-filters="rarity" data-value="Lendário">Lendário</button>
-                            </div>
-                        </div>
-                        <div class="filter-group">
-                            <span class="filter-label">Tipo:</span>
-                            <div class="filter-pills" id="type-filters">
-                                <button class="pill active" data-filter="status" data-value="all">Todos</button>
-                            </div>
-                        </div>
-                        <div class="filter-group">
-                            <span class="filter-label">Status:</span>
-                            <div class="filter-pills">
-                                <button class="pill active" data-filter="status" data-value="all">Todos</button>
-                                <button class="pill" data-filter="status" data-value="unlocked">Desbloqueados</button>
-                                <button class="pill" data-filter="status" data-value="locked">Bloqueados</button>
-                            </div>
-                        </div>
-                        <div class="filter-group">
-                            <span class="filter-label">Ordenar</span>
-                            <div class="filter-pills">
-                                <button class="pill active" data-filter="sort" data-value="id">Padrão</button>
-                                <button class="pill" data-filter="sort" data-value="level">Nível</button>
-                                <button class="pill" data-filter="sort" data-value="name">Nome</button>
-                                <button class="pill" data-filter="sort" data-value="atk">Ataque</button>
-                            </div>
-                        </div>
+                    <div class="showcase-card sc2">⚔️🐯<div class="sc-label">Samurai</div>
                     </div>
-                </section>
-
-                <!-- PROGRESSO -->
-                <div id="progress-section">
-                    <div class="progress-inner">
-                        <span class="progress-label">Progresso da Coleção</span>
-                        <div class="progress-bar-outer">
-                            <div class="progress-bar-fill" id="global-progress-bar"></div>
-                        </div>
-                        <span class="progress-pct" id="global-progress-pct">0%</span>
+                    <div class="showcase-card sc3">🧙‍♂️🐱<div class="sc-label">Mago</div>
+                    </div>
+                    <div class="showcase-card sc4">🚀🐱<div class="sc-label">Astronauta</div>
+                    </div>
+                    <div class="showcase-card sc5">🤖🐱<div class="sc-label">Cyborg</div>
+                    </div>
+                    <div class="showcase-card sc6">🏴‍☠️🐱<div class="sc-label">Pirata</div>
                     </div>
                 </div>
+            </div>
 
-                <!-- TAB: CATÁLOGO -->
-                <div id="tab-catalog" class="tab-panel active">
-                    <main id="cards-grid"></main>
-                    <div id="no-results" class="hidden">
-                        <span>😿</span>
-                        <p>Nenhum gato encontrado com esses filtros T-T</p>
+            <div class="hero-scroll-hint">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="features-section" id="features-section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <div class="section-eyebrow">Por que CatDex?</div>
+                    <h2 class="section-title">Features <span class="accent-gradient">Épicas</span></h2>
+                    <p class="section-sub">Tudo o que uma enciclopédia felina precisa. E mais.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card fc-highlight">
+                        <div class="feature-icon">🃏</div>
+                        <h3>Cards Interativos</h3>
+                        <p>Cada gato é um card animado com stats, XP, raridade e habilidades únicas. Hover revela
+                            detalhes ocultos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌓</div>
+                        <h3>Tema Reativo</h3>
+                        <p>Gatos noturnos ficam tristes no modo claro. Gatos diurnos dormem no escuro. Personalidade
+                            real.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Desbloqueio Épico</h3>
+                        <p>Efeito de partículas, jingle de celebração e animação de desbloqueio para cada novo gato
+                            conquistado.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Progresso Salvo</h3>
+                        <p>Sua coleção persiste via localStorage. Feche o navegador, volte quando quiser — os gatos te
+                            aguardam.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔎</div>
+                        <h3>Busca & Filtros</h3>
+                        <p>Filtre por raridade, tipo e status. Busca em tempo real por nome. Encontre qualquer gato em
+                            segundos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎵</div>
+                        <h3>Sons & Microinterações</h3>
+                        <p>Web Audio API gera sons procedurais para abertura de modal, desbloqueio e interações. Imersão
+                            total.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Sistema de Ranking</h3>
+                        <p>Compare gatos por ATK, DEF, SPD e MANA. Descubra qual é o mais poderoso da sua coleção.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Estatísticas da Coleção</h3>
+                        <p>Veja seu progresso, raridades coletadas e gatos favoritos em um painel completo.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- TAB: COLEÇÃO -->
-                <div id="tab-collection" class="tab-panel">
-                    <div id="collection-dashboards"></div>
+        <!-- PREVIEW DOS GATOS -->
+        <section class="cats-preview-section" id="cats-preview">
+            <div class="section-inner">
+                <div class="section-header">
+                    <div class="section-eyebrow">Conheça os Felinos</div>
+                    <h2 class="section-title">Gatos <span class="accent-gradient">Disponíveis</span></h2>
+                    <p class="section-sub">Uma prévia dos 12 gatos únicos que você pode colecionar.</p>
+                </div>
+                <div class="preview-grid" id="home-preview-grid"></div>
+                <div class="preview-cta">
+                    <button class="btn-hero-primary" onclick="navigateTo('dex')">
+                        Ver todos no CatDex
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS ANIMADOS -->
+        <section class="stats-section" id="stats-section">
+            <div class="section-inner">
+                <div class="stats-grid">
+                    <div class="stat-counter">
+                        <div class="stat-num" data-target="12">0</div>
+                        <div class="stat-label">Gatos Únicos</div>
+                    </div>
+                    <div class="stat-counter">
+                        <div class="stat-num" data-target="4">0</div>
+                        <div class="stat-label">Raridades</div>
+                    </div>
+                    <div class="stat-counter">
+                        <div class="stat-num" data-target="24">0</div>
+                        <div class="stat-label">Habilidades</div>
+                    </div>
+                    <div class="stat-counter">
+                        <div class="stat-num" data-target="9">0</div>
+                        <div class="stat-label">Tipos de Classe</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RARIDADES -->
+        <section class="rarity-section">
+            <div class="section-inner">
+                <div class="section-header">
+                    <div class="section-eyebrow">Sistema de Raridade</div>
+                    <h2 class="section-title">Quão <span class="accent-gradient">Raro</span> você é?</h2>
+                </div>
+                <div class="rarity-grid">
+                    <div class="rarity-showcase rarity-showcase-comum">
+                        <div class="rarity-icon">⬜</div>
+                        <div class="rarity-name">Comum</div>
+                        <div class="rarity-desc">Fácil de encontrar, difícil de ignorar. Todo gato tem sua história.
+                        </div>
+                        <div class="rarity-count">2 gatos</div>
+                    </div>
+                    <div class="rarity-showcase rarity-showcase-raro">
+                        <div class="rarity-icon">🔷</div>
+                        <div class="rarity-name">Raro</div>
+                        <div class="rarity-desc">Acima da média. Habilidades especiais e personalidade marcante.</div>
+                        <div class="rarity-count">4 gatos</div>
+                    </div>
+                    <div class="rarity-showcase rarity-showcase-epico">
+                        <div class="rarity-icon">💜</div>
+                        <div class="rarity-name">Épico</div>
+                        <div class="rarity-desc">Poderes imensuráveis e ego ainda maior. Difícil de desbloquear.</div>
+                        <div class="rarity-count">4 gatos</div>
+                    </div>
+                    <div class="rarity-showcase rarity-showcase-lendario">
+                        <div class="rarity-icon">👑</div>
+                        <div class="rarity-name">Lendário</div>
+                        <div class="rarity-desc">Existências míticas. Miados que ecoam pela eternidade.</div>
+                        <div class="rarity-count">2 gatos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-section">
+            <div class="cta-inner">
+                <div class="cta-glow"></div>
+                <div class="cta-emoji">🐱</div>
+                <h2 class="cta-title">Pronto para começar?</h2>
+                <p class="cta-desc">Sua coleção felina te aguarda. Os gatos já estão julgando você.</p>
+                <button class="btn-hero-primary btn-cta-big" onclick="navigateTo('dex')">
+                    ⚡Abrir CatDex Agora
+                </button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="home-footer">
+            <div class="footer-inner">
+                <div class="logo">
+                    <span class="logo-icon">🐱</span>
+                    <span class="logo-text">Cat<span class="logo-accent">Dex</span></span>
+                </div>
+                <p class="footer-text">Feito com 🐾 e muito café. Nenhum gato foi prejudicado.</p>
+                <p class="footer-copy">© 2025 CatDex • HTML + CSS + JS puro</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+       PÁGINA DEX (App principal)
+  ══════════════════════════════════════════════ -->
+    <div id="page-dex" class="page">
+
+        <!-- HEADER DEX -->
+        <header id="main-header">
+            <div class="header-inner">
+                <div class="logo header-logo" onclick="navigateTo('home')" style="cursor:pointer" title="Voltar à Home">
+                    <span class="logo-icon">🐱</span>
+                    <span class="logo-text">Cat<span class="logo-accent">Dex</span></span>
                 </div>
 
-                <!-- TAB: RANKING -->
-                <div id="tab-ranking" class="tab-panel">
-                    <div id="ranking-panel"></div>
+                <div class="search-wrap">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" placeholder="Buscar gato..." autocomplete="off" />
+                    <button id="search-clear" title="Limpar">✕</button>
                 </div>
 
-            </div><!-- /page-dex -->
+                <div class="header-right">
+                    <div class="collection-badge" id="collection-badge">
+                        <span>📖</span>
+                        <span id="collection-count">0</span>/<span id="collection-total">12</span>
+                        <span class="badge-label">coletados</span>
+                    </div>
+                    <button id="ranking-btn" class="icon-btn-header" title="Ranking">🏆</button>
+                    <button id="theme-toggle" class="icon-btn-header" title="Alternar tema">🌙</button>
+                    <button id="unlock-random-btn" class="btn-unlock">⚡ Desbloquear</button>
+                </div>
+            </div>
+        </header>
 
-            <!--
+        <!-- TABS -->
+        <div class="dex-tabs">
+            <button class="dex-tab active" data-tab="catalog">📋 Catálogo</button>
+            <button class="dex-tab" data-tab="collection">⭐ Minha Coleção</button>
+            <button class="dex-tab" data-tab="ranking">🏆 Ranking</button>
+        </div>
+
+        <!-- FILTROS -->
+        <section id="filters-section">
+            <div class="filters-inner">
+                <div class="filter-group">
+                    <span class="filter-label">Raridade:</span>
+                    <div class="filter-pills" id="rarity-filters">
+                        <button class="pill active" data-filter="rarity" data-value="all">Todas</button>
+                        <button class="pill rarity-comum" data-filter="rarity" data-value="Comum">Comum</button>
+                        <button class="pill rarity-raro" data-filter="rarity" data-value="Raro">Raro</button>
+                        <button class="pill rarity-epico" data-filter="rarity" data-value="Épico">Épico</button>
+                        <button class="pill rarity-lendario" data-filter="rarity"
+                            data-value="Lendário">Lendário</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Tipo:</span>
+                    <div class="filter-pills" id="type-filters">
+                        <button class="pill active" data-filter="type" data-value="all">Todos</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Status:</span>
+                    <div class="filter-pills">
+                        <button class="pill active" data-filter="status" data-value="all">Todos</button>
+                        <button class="pill" data-filter="status" data-value="unlocked">Desbloqueados</button>
+                        <button class="pill" data-filter="status" data-value="locked">Bloqueados</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Ordenar:</span>
+                    <div class="filter-pills">
+                        <button class="pill active" data-filter="sort" data-value="id">Padrão</button>
+                        <button class="pill" data-filter="sort" data-value="level">Nível</button>
+                        <button class="pill" data-filter="sort" data-value="name">Nome</button>
+                        <button class="pill" data-filter="sort" data-value="atk">Ataque</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRESSO -->
+        <div id="progress-section">
+            <div class="progress-inner">
+                <span class="progress-label">Progresso da Coleção</span> <!-- LORENZO PAROU AQUI 17/06/26 -->
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-fill" id="global-progress-bar"></div>
+                </div>
+                <span class="progress-pct" id="global-progress-pct">0%</span>
+            </div>
+        </div>
+
+        <!-- TAB: CATÁLOGO -->
+        <div id="tab-catalog" class="tab-panel active">
+            <main id="cards-grid"></main>
+            <div id="no-results" class="hidden">
+                <span>😿</span>
+                <p>Nenhum gato encontrado com esses filtros...</p>
+            </div>
+        </div>
+
+        <!-- TAB: COLEÇÃO -->
+        <div id="tab-collection" class="tab-panel">
+            <div id="collection-dashboard"></div>
+        </div>
+
+        <!-- TAB: RANKING -->
+        <div id="tab-ranking" class="tab-panel">
+            <div id="ranking-panel"></div>
+        </div>
+
+    </div><!-- /page-dex -->
+
+    <!-- ══════════════════════════════════════════════
                     ELEMENTOS GLOBAIS
-            -->
+  ══════════════════════════════════════════════ -->
 
-            <!-- MODAL DE DETALHES -->
-             <div id="modal-overlay" class="hidden">
-                <div id="modal-box">
-                    <button id="modal-close">✕</button>
-                    <div id="modal-content"></div>
-                </div>
-             </div>
+    <!-- MODAL DE DETALHES -->
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-box">
+            <button id="modal-close">✕</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
 
-            <!-- TOAST-->
-            <div id="toast-container"></div>
+    <!-- TOAST-->
+    <div id="toast-container"></div>
 
-            <!-- EFEITO DE DESBLOQUEIO -->
-            <div id="unlock-fx" class="hidden">
-                <div class="unlock-burst">
-                    <div class="unlock-rings">
-                        <div class="unlock-ring r1"></div>
-                        <div class="unlock-ring r2"></div>
-                        <div class="unlock-ring r3"></div>
-                    </div>
-                    <div class="unlock-cat-icon" id="unlock-cat-icon"></div>
-                    <div class="unlock-title">✨ Novo Gato Desbloqueado!</div>
-                    <div class="unlock-name" id="unlock-name"></div>
-                    <div class="unlock-rarity" id="unlock-rarity"></div>
-                    <div class="unlock-hint">Clique para continuar</div>
-                </div>
+    <!-- EFEITO DE DESBLOQUEIO -->
+    <div id="unlock-fx" class="hidden">
+        <div class="unlock-burst">
+            <div class="unlock-rings">
+                <div class="unlock-ring r1"></div>
+                <div class="unlock-ring r2"></div>
+                <div class="unlock-ring r3"></div>
             </div>
+            <div class="unlock-cat-icon" id="unlock-cat-icon"></div>
+            <div class="unlock-title">✨ Novo Gato Desbloqueado!</div>
+            <div class="unlock-name" id="unlock-name"></div>
+            <div class="unlock-rarity" id="unlock-rarity"></div>
+            <div class="unlock-hint">Clique para continuar</div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
