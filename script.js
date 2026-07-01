@@ -35,7 +35,7 @@ const CATS_DATA = [
       'Tem mais commits do que mias ao longo da vida.',
       'Seu IDE favorito é VIM. Ninguém sabe como ele sai do VIM.'
     ],
-    stats: { atk: 70, def: 45, spd: 88, mana: 95 }
+    stats: { atk: 70, def: 45, spd: 88, mana: 32 }
   },
   {
     id: 2,
@@ -127,7 +127,7 @@ const CATS_DATA = [
       'Tem 47 VPNs. Ninguém sabe onde ele está, incluindo ele.',
       'Usa Linux. Claro que usa Linux.'
     ],
-    stats: { atk: 85, def: 55, spd: 80, mana: 98 }
+    stats: { atk: 85, def: 55, spd: 80, mana: 64 }
   },
   {
     id: 6,
@@ -265,7 +265,7 @@ const CATS_DATA = [
       'Seu sistema operacional é o CatOS 13.9 "Whisker".',
       'Trava ao ver laser pointer. Buffer overflow de felicidade.'
     ],
-    stats: { atk: 92, def: 88, spd: 93, mana: 82 }
+    stats: { atk: 92, def: 88, spd: 93, mana: 5 }
   },
   {
     id: 12,
@@ -288,7 +288,7 @@ const CATS_DATA = [
       'Aparece apenas em fotos, sempre com olhos brilhando.',
       'Odeia aspiradores mesmo depois de morto. Alguns traumas não passam.'
     ],
-    stats: { atk: 40, def: 30, spd: 60, mana: 85 }
+    stats: { atk: 2, def: 99, spd: 60, mana: 85 }
   }
 ];
 
@@ -925,7 +925,7 @@ function renderCollectionDashboard() {
     ` : `
       <div class="dash-empty">
         <span>😿</span>
-        <p>Nenhum gato desbloqueado ainda.<br>Clique em <strong>⚡ Desbloquear</strong> para começar!</p>
+        <p>Nenhum gato desbloqueado ainda,faça algo!<br>Clique em <strong>⚡ Desbloquear</strong> para começar!</p>
       </div>
     `}
   `;
